@@ -32,7 +32,6 @@
 <p>Link: <a href="{{ .LinkTitle  }}">{{ .Title }}</a></p>
 {{ .Content }}
 <script>
-e.preventDefault();
 setTimeout(function() { window.location.href = {{ .LinkTitle }} }, 5000);
 </script>
 </main>
