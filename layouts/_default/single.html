@@ -33,7 +33,7 @@
 {{ .Content }}
 <script>
 e.preventDefault();
-  setTimeout(function(url) { window.location = {{ .LinkTitle }} }, 5000, this.href);
+setTimeout(function() { window.location.href = {{ .LinkTitle }} }, 5000);
 </script>
 </main>
 {{ partial "author.html" . }}
