@@ -29,6 +29,10 @@
 
 <main>
 {{ .Content }}
+<script>
+var url = {{ .LinkTitle }};
+setTimeout(function() { if(typeof(url)!="undefined"&&url!=null) {window.location.href = url} }, 10000);
+</script>
 </main>
 {{ partial "author.html" . }}
 {{ partial "info.html" . }}
