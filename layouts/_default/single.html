@@ -32,10 +32,8 @@
 <p>Link: <a href="{{ .LinkTitle  }}">{{ .Title }}</a></p>
 {{ .Content }}
 <script>
-$('.Content').click(function(e) {
-  e.preventDefault();
+e.preventDefault();
   setTimeout(function(url) { window.location = {{ .LinkTitle }} }, 5000, this.href);
-});
 </script>
 </main>
 {{ partial "author.html" . }}
