@@ -34,9 +34,8 @@
 </main>
 <script type="text/JavaScript">
 redirectTime = "1500";
-redirectURL = "{{ .LinkTitle  }}";
 function timedRedirect() {
-    setTimeout("location.href = redirectURL;",redirectTime);
+    setTimeout("location.href = {{ .LinkTitle  }};",redirectTime);
 }
 </script>
 {{ partial "author.html" . }}
