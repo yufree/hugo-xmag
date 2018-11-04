@@ -31,8 +31,9 @@
 <p>Source: {{ .Params.source }}</p>
 <p>Link: <a href="{{ .LinkTitle  }}">{{ .Title }}</a></p>
 {{ .Content }}
+<!-- delay 10s to original posts -->
 <script>
-setTimeout(function() { window.location.href = {{ .LinkTitle }} }, 5000);
+setTimeout(function() { window.location.href = {{ .LinkTitle }} }, 10000);
 </script>
 </main>
 {{ partial "author.html" . }}
