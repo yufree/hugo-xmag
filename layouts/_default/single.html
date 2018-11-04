@@ -31,11 +31,11 @@
 <p>Source: {{ .Params.source }}</p>
 <p>Link: <a href="{{ .LinkTitle  }}">{{ .Title }}</a></p>
 {{ .Content }}
-<script type="text/JavaScript">
-redirectTime = "1500";
-function timedRedirect() {
-    setTimeout("location.href = {{ .LinkTitle  }};",redirectTime);
-}
+<script>
+$('.Content').click(function(e) {
+  e.preventDefault();
+  setTimeout(function(url) { window.location = {{ .LinkTitle }} }, 5000, this.href);
+});
 </script>
 </main>
 {{ partial "author.html" . }}
